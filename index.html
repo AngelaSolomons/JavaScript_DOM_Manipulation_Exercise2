@@ -12,10 +12,51 @@
         <p id="profileRole">Software Developer</p>
         <p id="profileBio">Passionate about coding and learning new technolgies.</p>
         <button id="updateNameBtn">Update Name</button>
+        <button id="updateRoleBtn">Update Role</button>
         <button id="toggleStatusBtn">Toggle Active Status</button>
+        <button id="changeImageBtn">Change Image</button>
     </div>
 
-    
+    <script>
+        // Access HTML Elements
+        const profileImg = document.getElementById("profileImage");
+        const profileName = document.getElementById("profileName");
+        const profileRole = document.getElementById("profileRole");   
+        const profileBio = document.getElementById("profileBio");
+        const updateNameBtn = document.getElementById("updateNameBtn");
+        const updateRoleBtn = document.getElementById("updateRoleBtn");
+        const toggleStatusBtn = document.getElementById("toggleStatusBtn");
+        const changeImageBtn = document.getElementById("changeImageBtn");
+        
+        // Change the content of the Element
+        // Update Name
+        updateNameBtn.addEventListener('click', () => {
+            let newName = prompt("Update your username:");
+
+            if (newName) {
+            profileName.textContent = newName;
+            }
+        });
+
+        // Update Role
+        updateRoleBtn.addEventListener('click', () => {
+            let newRole = prompt("Update your role:");
+
+            if (newRole) {
+                profileRole. textContent = newRole;
+            }
+        });
+
+        // Update Image
+        changeImageBtn.addEventListener('click', () => {
+            let newImage = prompt("Insert new image URL:");
+
+            if (newImage) {
+                src.textContent = newImage
+            }
+        });
+
+    </script>
     
 </body>
 </html>
