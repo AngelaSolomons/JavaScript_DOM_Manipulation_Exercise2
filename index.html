@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Dynamic Profile Card</title>
 </head>
 <body>
@@ -17,8 +18,11 @@
         <button id="changeImageBtn">Change Image</button>
     </div>
 
+
+        <!-- JavaScript -->
     <script>
         // Access HTML Elements
+        const profileCard = document.getElementById("profileCard");
         const profileImg = document.getElementById("profileImage");
         const profileName = document.getElementById("profileName");
         const profileRole = document.getElementById("profileRole");   
@@ -28,7 +32,7 @@
         const toggleStatusBtn = document.getElementById("toggleStatusBtn");
         const changeImageBtn = document.getElementById("changeImageBtn");
         
-        // Change the content of the Element
+
         // Update Name
         updateNameBtn.addEventListener('click', () => {
             let newName = prompt("Update your username:");
@@ -47,16 +51,20 @@
             }
         });
 
+        // Active Status Toggle
+        toggleStatusBtn.addEventListener('click', () => {
+            profileCard.classList.toggle("active-status");
+        });
+
         // Update Image
         changeImageBtn.addEventListener('click', () => {
             let newImage = prompt("Insert new image URL:");
 
             if (newImage) {
-                src.textContent = newImage
+                profileImg.src = newImage
             }
         });
 
     </script>
-    
 </body>
 </html>
